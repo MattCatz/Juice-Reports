@@ -1,0 +1,3 @@
+[submodule "juicy"]
+	path = juicy
+	url = https://github.com/jwd0023/juicy.git
