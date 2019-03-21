@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[table]{xcolor}          % Allows for colors in tables
+\usepackage[margin=1in]{geometry}   % Sets the margins
+\usepackage{float}                  % Used to place tables absolute
+\usepackage{graphicx}               % Used to place graphics
+\usepackage{makecell}               % Used to format tables
+\usepackage{pdfpages}               % Used to include pdfs as pages
+
+
+\newcommand{\spiceitup}{\rowcolors{1}{gray!25}{white}} % Alternates row colors
+\newcommand{\tabref}[1]{Table \ref{tab:#1}} % Short cut for referencing tables
+\newcommand{\figref}[1]{Figure \ref{fig:#1}} % Short cut for referencing figs
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Make horizontal lines
+
+\makeatletter
+\renewcommand*\l@section{\@dottedtocline{1}{1.5em}{2.3em}} % Adds dots to the TOC
+\renewcommand*\l@subsection{\@dottedtocline{2}{5em}{3em}} % Indents the subsections
+\renewcommand*\l@subsubsection{\@dottedtocline{3}{4.3em}{3.2em}} % Indents the subsubsections
+\makeatother
+
+\newcommand{\juicy}{J.U.I.C.Y.~}
+
+% \title{Operation Juice Project Proposal}
+% \author{Matthew Cather}
+% \date{January 2019}
+
+\begin{document}
+
+\input{template/cover.tex}
+\input{sections/abstract.tex}
+\input{template/toc.tex}
+\input{sections/motivation.tex}
+\input{sections/Phase1.tex}
+\input{sections/accelerometer.tex}
+\newpage
+\input{sections/PI.tex}
+\input{sections/Power.tex}
+\input{sections/printing.tex}
+\input{sections/testing.tex}
+\input{sections/budget.tex}
+\input{sections/Phase2.tex}
+\input{sections/conclusion.tex}
+\newpage
+\input{sections/bibliography.tex}
+\includepdf[pages=-]{sections/disposition.pdf}
+
+\end{document}
